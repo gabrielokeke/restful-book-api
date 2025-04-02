@@ -13,19 +13,15 @@ exports.createAuthor = async (req, res) => {
   }
 };
 
-// Retrieve all authors
-const Author = require('../models/author');
-
-// Get all authors
+// Recuperer tout les auteurs 
 exports.getAllAuthors = async (req, res) => {
   try {
-    const authors = await Author.find(); // Fetch all authors
+    const authors = await Author.find();
     res.status(200).json(authors);
   } catch (err) {
     res.status(500).json({ message: 'Erreur lors de la récupération des auteurs', error: err });
   }
 };
-
 
 // Lire un auteur spécifique
 exports.getAuthorById = async (req, res) => {

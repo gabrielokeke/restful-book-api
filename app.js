@@ -12,7 +12,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Connexion à la base de données MongoDB
-mongoose.connect('mongodb+srv://okekegabriel84:gabe84@mycluster.pwb8o.mongodb.net/resfulAPI', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://okekegabriel84:gabe84@mycluster.pwb8o.mongodb.net/resfulAPI')
   .then(() => console.log('Connexion à MongoDB réussie'))
   .catch((error) => console.log('Erreur de connexion à MongoDB:', error));
 
